@@ -5,6 +5,7 @@
   <ProjectComp/>
   <ResumeComp/>
   <TestimonialComp/>
+  <ContactComp/>
   <FooterComp/>
   <router-view/>
 </template>
@@ -17,6 +18,7 @@ import AboutComp from './components/AboutComp.vue'
 import ProjectComp from './components/ProjectComp.vue'
 import ResumeComp from './components/ResumeComp.vue'
 import TestimonialComp from './components/TestimonialComp.vue'
+import ContactComp from './components/ContactComp.vue'
 
 export default{
   components:{
@@ -26,6 +28,7 @@ export default{
     ProjectComp,
     ResumeComp,
     TestimonialComp,
+    ContactComp,
     FooterComp
   }
 }
