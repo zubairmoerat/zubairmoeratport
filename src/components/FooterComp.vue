@@ -15,5 +15,10 @@
 </script>
 
 <style scoped>
-
+.row{
+    background: #000;
+}
+p{
+    color: #fff;
+}
 </style>

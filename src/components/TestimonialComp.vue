@@ -1,20 +1,21 @@
 <template>
     <div class="container-fluid" id="testi">
         <h1 class="text-center">My References</h1>
-        <div class="row" v-if="Testimonials">
-        <label class="card-wrap" v-for="testimonial in Testimonials" :key="testimonial">
-            <input type="checkbox" class="flipcard">
-            <div class="card">
-                <div class="front card-face">
-                    <img :src="testimonial.image" alt="imgPerson" class="card-photo">
-                </div>
-                <div class="back card-face">
-                    <h5>{{ testimonial.name }} {{ testimonial.surname }}</h5>
-                    <p class="text-center">{{ testimonial.quote }}</p>
+        <div class="d-flex justify-content-evenly container" v-if="Testimonials" id="squirt">
+            <div class="card-wrap" v-for="testimonial in Testimonials" :key="testimonial">
+                <div class="flip-box m-3">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img :src="testimonial.image" alt="peeps">
+                        </div>
+                        <div class="flip-box-back align-content-center">
+                            <h5>{{ testimonial.name }} {{ testimonial.surname }}</h5>
+                            <p>{{ testimonial.quote }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </label>
-    </div>
+        </div>
     </div>
 </template>
 <script>
@@ -31,77 +32,64 @@
 </script>
 
 <style scoped>
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+#testi{
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-
-.card-wrap {
+img{
     width: 250px;
-    height: 400px;
-    max-width: 100%;
+    height: 300px;
+    filter: grayscale(100);
 }
 
-.card,
-.front,
-.back,
-.card-photo {
-    width: 100%;
-    height: 100%;
+h1{
+    color: #eb5e28;
+}
+.flip-box {
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.card-face {
-    position: absolute;
-    backface-visibility: hidden;
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.card {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s, box-shadow .4s;
-    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
-    border-radius: 10px;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
 }
 
-.card-photo {
-    border-radius: 10px;
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
 }
 
-.card:hover {
-    cursor: pointer;
-    box-shadow: 0 1px 3px 0 #45433e, 0 4px 8px 3px #e9322e;
-    transform: translateY(-15px);
+/* Style the back side */
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
 }
-
-.back {
-    background: #45433e;
-    transform: rotateY(180deg);
-    text-align: center;
-    border-radius: 10px;
+@media screen and (max-width: 720px) and (min-width: 300px){
+    #squirt{
+        flex-direction: column;
+    }
+    #testi{
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-
-.back p {
-    margin: 0;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow-y: auto;
-    color: #fff;
 }
-
-.flipcard {
-    opacity: 0;
-}
-
-input:checked+.card {
-    transform: rotateY(180deg);
-}
-
-h5 {
-    color: #fff;
-}
-
 </style>
