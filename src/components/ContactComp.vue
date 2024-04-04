@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid" id="contact">
-        <h1>Contact Me</h1>
+        <h1 class="text-center">Contact Me</h1>
         <div class="contactRow">
             <div class="contactCol">
                 <form action="https://formspree.io/f/maygaowg" method="POST" id="contactForm" name="contactForm"
@@ -33,9 +33,9 @@
                 </form>
             </div>
             <div class="contactCol">
-                <h3 class="text-center"><i class="bi bi-geo-alt"></i> District 6, Cape Town</h3>
-                <h3 class="text-center"><i class="bi bi-whatsapp"></i> +27 68 266 5739</h3>
-                <h3 class="text-center"><i class="bi bi-envelope"></i> moeratz02@outlook.com</h3>
+                <h3 class="text-center"><i class="fa-solid fa-location-dot"></i> District 6, Cape Town</h3>
+                <h3 class="text-center"><i class="fa-solid fa-phone"></i> +27 68 266 5739</h3>
+                <h3 class="text-center"><i class="fa-solid fa-envelope"></i> moeratz02@outlook.com</h3>
             </div>
         </div>
     </div>
@@ -46,6 +46,13 @@ export default {
 }
 </script>
 <style scoped>
+#contact{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+h1{
+    color: #eb5e28;
+}
 .contactRow {
     display: flex;
     justify-content: center;
@@ -64,7 +71,7 @@ export default {
 }
 
 .form-group {
-    width: 300px;
+    width: 500px;
 }
 
 form {
@@ -72,26 +79,28 @@ form {
 }
 
 h3 {
+    color: #eb5e28;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-shadow: 0 2px 1px #e9322e;
 }
 
 .btn {
-    border: 1px solid #45433e;
+    border: 1px solid #fff;
     box-shadow: 0 2px 3px #e9322e;
-    background: #45433e;
+    background: #000;
     color: #fff;
 }
 
 input {
-    background: #45433e;
+    background: #000;
     box-shadow: 0 2px 3px #e9322e;
+    color: #fff;
 }
 
 textarea {
-    background: #45433e;
+    background: #000;
     box-shadow: 0 2px 3px #e9322e;
+    color: #fff;
 }
 
 input::placeholder {
@@ -102,4 +111,12 @@ textarea::placeholder {
     color: #fff;
 }
 
+@media screen and (max-width: 720px) and (min-width: 300px){
+    .form-group{
+        width: 250px;
+    }
+    #contact{
+    padding: 0;
+}
+}
 </style>

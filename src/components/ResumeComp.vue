@@ -96,15 +96,15 @@
             </div>
         </div>
         <h1 class="text-center">My Skills</h1>
-        <div class="d-flex justify-content-evenly flex-wrap" v-if="Softskills">
-            <div class="card" v-for="skill in Softskills" :key="skill">
+        <div class="d-flex justify-content-evenly flex-wrap p-3" v-if="Softskills">
+            <div class="card m-3" v-for="skill in Softskills" :key="skill">
                 <div class="card-body text-center" id="softy">
                     <h5 class="card-title">{{ skill.title }}</h5>
                     <p class="card-text">{{ skill.description }}</p>
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-evenly flex-wrap" id="techy" v-if="Techskills">
+        <div class="d-flex justify-content-evenly flex-wrap p-3" id="techy" v-if="Techskills">
             <div class="text-center" v-for="title in Techskills" :key="title">
                 <h5>{{ title.tech }}</h5>
                 <img :src="title.image" alt="skill" class="img-fluid h-75 w-75">
@@ -134,6 +134,8 @@
 #xp{
     width: 800px;
     margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .card{
     width: 200px;
@@ -146,9 +148,26 @@
 .card-body:hover + .card-text{
     display: block;
 }
+.accordion-item{
+    color: #fff;
+    background: #000;
+}
+.accordion-button{
+    background: #000;
+}
+h3{
+    color: #fff;
+}
+h1{
+    color: #eb5e28;
+}
+h5{
+    color: #eb5e28;
+}
 @media screen and (max-width: 720px) and (min-width: 300px){
     #xp{
         width: 250px;
+        padding: 0;
     }
     .img-fluid{
         display: none;
@@ -156,7 +175,10 @@
     #techy{
         flex-direction: column;
     }
-    .card-text{
+    h5{
+        padding-top: 15px;
+    }
+    .card{
         display: none;
     }
 }

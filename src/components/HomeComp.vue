@@ -4,7 +4,7 @@
         <div class="d-flex justify-content-evenly flex-wrap" id="landing-section">
             <div class="align-content-center">
                 <h3 class="text-center">I am Zubair Moerat</h3>
-                <h5 class="text-center">an aspiring web developer.</h5>
+                <h5 class="text-center">a full-stack developer.</h5>
             </div>
             <div class="align-content-center">
                 <img src="https://iili.io/JW5qdoG.jpg" alt="Me" class="img-fluid rounded">
@@ -20,4 +20,31 @@
 </script>
 
 <style scoped>
+#landing-section{
+    height: 75vh;
+}
+img{
+    filter: grayscale(100);
+}
+h1{
+    color: #eb5e28;
+    padding-top: 40px;
+}
+h3{
+    color: #eb5e28;
+}
+h5{
+    color: #eb5e28;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 720px) and (min-width: 300px){
+    img{
+        height: 150px;
+        width: 150px;
+    }
+}
 </style>

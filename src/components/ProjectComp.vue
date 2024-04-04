@@ -2,7 +2,7 @@
     <div id="projects" class="container-fluid">
         <h1 class="text-center">My Work</h1>
         <div class="proWrapper" v-if="projects">
-            <div class="card" v-for="project in projects" :key="project">
+            <div class="card m-3" v-for="project in projects" :key="project">
                 <div class="card-body text-center">
                     <img :src="project.image" alt="project" class="img-fluid">
                     <h5 class="card-title">{{ project.assignment }}</h5>
@@ -34,18 +34,31 @@ export default {
 img{
     width: 150px;
     height: 75px;
+    filter: grayscale(100);
+}
+h1{
+    color: #eb5e28;
 }
 .proWrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .card{
     width: 200px;
-    box-shadow: 0 3px 5px #000;
+    /* box-shadow: 0 3px 5px #fff; */
+    background: #eb5e28;
+    color: #fff;
 }
 a:hover {
     transform: translateY(-5px);
+}
+@media screen and (max-width: 720px) and (min-width: 300px){
+    p{
+        display: none;
+    }
 }
 </style>

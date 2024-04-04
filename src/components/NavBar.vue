@@ -1,37 +1,34 @@
 <template>
-    <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#home"><img src="https://iili.io/JNoo9ql.jpg" alt="logo" class="img-fluid h-50 w-50"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler bg-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link fs-3" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About Me</a>
+                            <a class="nav-link fs-3" href="#about">About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
+                            <a class="nav-link fs-3" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#resume">Experience</a>
+                            <a class="nav-link fs-3" href="#resume">Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testi">References</a>
+                            <a class="nav-link fs-3" href="#testi">References</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact Me</a>
+                            <a class="nav-link fs-3" href="#contact">Contact Me</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </div>
 </template>
 
 <script>
@@ -41,8 +38,25 @@ export default {
 </script>
 
 <style scoped>
-.nav-link-active{
-    color: blue;
+nav{
+    background: #000;
+    z-index: 10000;
 }
-
+.nav-item{
+    padding-left: 25px;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    color: #eb5e28;
+}
+a:active{
+    color: #eb5e28;
+}
+@media screen and (max-width: 720px) and (min-width: 300px){
+    .nav-item{
+        padding: 0;
+    }
+}
 </style>
