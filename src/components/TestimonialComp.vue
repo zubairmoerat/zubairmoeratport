@@ -70,8 +70,11 @@ h1{
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
+.flip-box:hover .flip-box-inner{
   transform: rotateY(180deg);
+}
+.flip-box:hover img{
+    filter: none;
 }
 
 /* Position the front and back side */
