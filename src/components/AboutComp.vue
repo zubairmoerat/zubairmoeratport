@@ -41,6 +41,7 @@ h1{
 p{
     color: #fff;
     padding-top: 15px;
+    font-size: 20px;
 }
 @media screen and (max-width: 800px) and (min-width: 300px){
     img{
@@ -56,6 +57,9 @@ p{
     }
     .col{
         padding-bottom: 15px;
+    }
+    p{
+        font-size: 12px;
     }
 }
 </style>
