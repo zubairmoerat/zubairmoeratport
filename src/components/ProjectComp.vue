@@ -59,6 +59,9 @@ h1{
 a:hover {
     transform: translateY(-5px);
 }
+.card:hover img{
+    filter: none;
+}
 @media screen and (max-width: 720px) and (min-width: 300px){
     p{
         display: none;
