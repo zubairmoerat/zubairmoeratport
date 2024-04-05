@@ -1,12 +1,12 @@
 <template>
     <div id="home" class="container-fluid">
         <h1 class="text-center">Welcome to my Portfolio</h1>
-        <div class="d-flex justify-content-evenly flex-wrap" id="landing-section">
+        <div class="d-flex justify-content-evenly" id="landing-section">
             <div class="align-content-center">
                 <h3 class="text-center">I am Zubair Moerat</h3>
                 <h5 class="text-center">a full-stack developer.</h5>
             </div>
-            <div class="align-content-center">
+            <div class="d-flex justify-content-center">
                 <img src="https://iili.io/JW5qdoG.jpg" alt="Me" class="img-fluid rounded">
             </div>
         </div>
@@ -30,6 +30,7 @@ h1{
 }
 h3{
     color: #eb5e28;
+    font-size: 40px;
 }
 h5{
     color: #eb5e28;
@@ -47,6 +48,7 @@ a{
     #landing-section{
     margin-top: 50px;
     margin-bottom: 50px;
+    flex-direction: column;
 }
 }
 </style>
