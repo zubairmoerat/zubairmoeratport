@@ -176,7 +176,7 @@ h5{
         width: 50px;
         height: 50px;
     }
-    h5{
+    #techy h5{
         display: none;
     }
     .card{
