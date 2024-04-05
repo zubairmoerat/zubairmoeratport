@@ -107,7 +107,7 @@
         <div class="d-flex justify-content-evenly flex-wrap p-3" id="techy" v-if="Techskills">
             <div class="text-center" v-for="title in Techskills" :key="title">
                 <h5>{{ title.tech }}</h5>
-                <img :src="title.image" alt="skill" class="img-fluid h-75 w-75">
+                <img :src="title.image" alt="skill" class="img-fluid" id="bruh">
             </div>
         </div>
     </div>
@@ -137,6 +137,9 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
+h1{
+    padding-top: 20px;
+}
 .card{
     width: 200px;
     height: 100px;
@@ -164,19 +167,17 @@ h1{
 h5{
     color: #eb5e28;
 }
-@media screen and (max-width: 720px) and (min-width: 300px){
+@media screen and (max-width: 800px) and (min-width: 300px){
     #xp{
         width: 250px;
         padding: 0;
     }
-    .img-fluid{
-        display: none;
-    }
-    #techy{
-        flex-direction: column;
+    #bruh{
+        width: 50px;
+        height: 50px;
     }
     h5{
-        padding-top: 15px;
+        display: none;
     }
     .card{
         display: none;

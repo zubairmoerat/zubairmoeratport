@@ -21,10 +21,8 @@
 
 <style scoped>
 #landing-section{
-    height: 75vh;
-}
-img{
-    filter: grayscale(100);
+    margin-top: 150px;
+    margin-bottom: 200px;
 }
 h1{
     color: #eb5e28;
@@ -41,10 +39,14 @@ a{
     color: #000;
 }
 
-@media screen and (max-width: 720px) and (min-width: 300px){
+@media screen and (max-width: 800px) and (min-width: 300px){
     img{
         height: 150px;
         width: 150px;
     }
+    #landing-section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 }
 </style>

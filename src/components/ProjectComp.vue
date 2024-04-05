@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+#projects{
+    padding-top: 50px;
+}
 img{
     width: 150px;
     height: 75px;
@@ -44,8 +47,8 @@ h1{
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 .card{
     width: 200px;
@@ -59,6 +62,10 @@ a:hover {
 @media screen and (max-width: 720px) and (min-width: 300px){
     p{
         display: none;
+    }
+    .proWrapper{
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 </style>

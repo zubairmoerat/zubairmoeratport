@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid" id="testi">
         <h1 class="text-center">My References</h1>
-        <div class="d-flex justify-content-evenly container" v-if="Testimonials" id="squirt">
+        <div class="container" v-if="Testimonials" id="squirt">
             <div class="card-wrap" v-for="testimonial in Testimonials" :key="testimonial">
                 <div class="flip-box m-3">
                     <div class="flip-box-inner">
@@ -35,6 +35,12 @@
 #testi{
     padding-top: 100px;
     padding-bottom: 100px;
+}
+#squirt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 img{
     width: 250px;
@@ -83,13 +89,14 @@ h1{
   color: white;
   transform: rotateY(180deg);
 }
-@media screen and (max-width: 720px) and (min-width: 300px){
+@media screen and (max-width: 800px) and (min-width: 300px){
     #squirt{
         flex-direction: column;
+        justify-content: center;
     }
     #testi{
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 </style>
