@@ -12,3 +12,11 @@
     font-family: "Bebas Neue", sans-serif;
     width: 100%;
 }
+html::-webkit-scrollbar {
+    display: none;
+    margin-top: 130px;
+}
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
