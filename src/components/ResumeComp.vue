@@ -41,7 +41,7 @@
                     data-bs-parent="#xp">
                     <div class="accordion-body">
                         <h5>AESDP</h5>
-                        <p>Studied mechanical engineering and completed N2. I recieved certifications for first aid and safety officer.</p>
+                        <p>Studied mechanical engineering and completed N2. I received certifications for first aid and safety officer.</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         <h5>Solo Cloud Distributions</h5><span>15/02/2023 - 31/08/2023</span>
                         <p>Sales representative.</p>
                         <h5>Life Choices Academy</h5><span>27/09/2023 - 28/03/2024</span>
-                        <p>Aquired certifications on building full-stack applications.</p>
+                        <p>Acquired certifications on building full-stack applications.</p>
                     </div>
                 </div>
             </div>
