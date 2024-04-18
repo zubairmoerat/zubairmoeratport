@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <p class="text-center">Zubair Moerat's Protfolio &copy; <span>{{ currYear }}</span></p>
+        <p class="text-center">Zubair Moerat's Portfolio &copy; <span>{{ currYear }}</span></p>
     </div>
 </template>
 
