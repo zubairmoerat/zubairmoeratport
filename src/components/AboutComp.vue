@@ -37,6 +37,7 @@
 }
 .para-wrapper{
     width: 65%;
+    padding-top: 33px;
 }
 h1{
     color: #eb5e28;
@@ -61,6 +62,9 @@ p{
     }
     .col{
         padding-bottom: 15px;
+    }
+    .para-wrapper{
+        margin: auto;
     }
     p{
         font-size: 12px;
