@@ -107,7 +107,7 @@
         <div class="d-flex justify-content-evenly flex-wrap p-3" id="techy" v-if="Techskills">
             <div class="text-center" v-for="title in Techskills" :key="title">
                 <h5>{{ title.tech }}</h5>
-                <img :src="title.image" alt="skill" class="img-fluid" id="bruh">
+                <img :src="title.image" alt="skill" class="img-fluid" id="bruh" loading="lazy">
             </div>
         </div>
     </div>

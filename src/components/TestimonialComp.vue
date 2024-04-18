@@ -6,7 +6,7 @@
                 <div class="flip-box m-3">
                     <div class="flip-box-inner">
                         <div class="flip-box-front">
-                            <img :src="testimonial.image" alt="peeps">
+                            <img :src="testimonial.image" alt="peeps" loading="lazy">
                         </div>
                         <div class="flip-box-back align-content-center">
                             <h5>{{ testimonial.name }} {{ testimonial.surname }}</h5>
