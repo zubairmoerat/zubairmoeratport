@@ -7,7 +7,7 @@
                 <h5 class="text-center">a full-stack developer.</h5>
             </div>
             <div class="d-flex justify-content-center">
-                <img src="https://iili.io/JW5qdoG.jpg" alt="Me" class="img-fluid rounded">
+                <img src="https://iili.io/JW5qdoG.jpg" alt="Me" class="img-fluid rounded" loading="lazy">
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
         <div class="proWrapper" v-if="projects">
             <div class="card m-3" v-for="project in projects" :key="project">
                 <div class="card-body text-center">
-                    <img :src="project.image" alt="project" class="img-fluid">
+                    <img :src="project.image" alt="project" class="img-fluid" loading="lazy">
                     <h5 class="card-title">{{ project.assignment }}</h5>
                     <p class="card-text">{{ project.info }}</p>
                 </div>
