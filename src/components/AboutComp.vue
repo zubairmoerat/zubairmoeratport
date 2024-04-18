@@ -35,12 +35,12 @@
 #about{
     margin-bottom: 100px;
 }
-/* .row{
+.row{
     padding-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-} */
+}
 .para{
     width: 65%;
     margin: auto;
