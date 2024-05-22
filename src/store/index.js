@@ -7,7 +7,8 @@ export default createStore({
     softskills: null,
     techskills:null,
     testimonials: null,
-    projects: null
+    projects: null,
+    certs: null
   },
   getters: {
   },
@@ -26,6 +27,9 @@ export default createStore({
     },
     setProjects(state, value) {
       state.projects = value
+    },
+    setCerts(state, value) {
+      state.certs = value
     }
   },
   actions: {
@@ -72,6 +76,15 @@ export default createStore({
         let { testimonials } = await res.json()
         context.commit('setTestimonials', testimonials)
       } catch (e) {
+        console.error('Error fetching Data', e)
+      }
+    },
+    async fetchCerts(context) {
+      try{
+        let res = await fetch(dataURL)
+        let {certs} = await res.json()
+        context.commit('setCerts', certs)
+      }catch(e){
         console.error('Error fetching Data', e)
       }
     }

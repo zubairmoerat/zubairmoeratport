@@ -96,18 +96,19 @@
             </div>
         </div>
         <h1 class="text-center">My Skills</h1>
-        <div class="d-flex justify-content-evenly flex-wrap p-3" v-if="Softskills">
-            <div class="card m-3" v-for="skill in Softskills" :key="skill">
-                <div class="card-body text-center" id="softy">
-                    <h5 class="card-title">{{ skill.title }}</h5>
-                    <p class="card-text">{{ skill.description }}</p>
-                </div>
-            </div>
-        </div>
         <div class="d-flex justify-content-evenly flex-wrap p-3" id="techy" v-if="Techskills">
             <div class="text-center" v-for="title in Techskills" :key="title">
                 <h5>{{ title.tech }}</h5>
                 <img :src="title.image" alt="skill" class="img-fluid" id="bruh" loading="lazy">
+            </div>
+        </div>
+        <h1 class="text-center">My Certifications</h1>
+        <div class="d-flex justify-content-evenly flex-wrap p-1" v-if="Certs">
+            <div v-for="cert in Certs" :key="cert">
+                <div class="card-body text-center" id="softy">
+                    <img :src="cert.certimage" alt="ree" id="certy">
+                    <h5 class="pt-4">{{ cert.certname }}</h5>
+                </div>
             </div>
         </div>
     </div>
@@ -119,18 +120,22 @@
             Techskills(){
                 return this.$store.state.techskills
             },
-            Softskills(){
-                return this.$store.state.softskills
+            Certs(){
+                return this.$store.state.certs
             }
         },
         mounted(){
             this.$store.dispatch('fetchTechskills'),
-            this.$store.dispatch('fetchSoftskills')
+            this.$store.dispatch('fetchCerts')
         }
     }
 </script>
 
 <style scoped>
+#certy{
+    height: 200px;
+    width: 200px;
+}
 #xp{
     width: 800px;
     margin: auto;
@@ -179,8 +184,9 @@ h5{
     #techy h5{
         display: none;
     }
-    .card{
-        display: none;
+    #certy{
+        height: 100px;
+        width: 100px;
     }
 }
 </style>
